@@ -14,7 +14,7 @@ x = np.linspace(-10, 12, 100)
 y = x*x*x - 6*x*x + 12*x + 5
 
 # Plotting the function 
-plt.plot(x, y, color="black", linestyle="-", linewidth=2, label='$f(x)$')
+plt.plot(x, y, color="black", linestyle="-", linewidth=2, label='$y=f(x)$')
 
 # Preparing to plot the inflection point:
 x2 = 2
