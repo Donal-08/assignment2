@@ -1,0 +1,48 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\title{Assignment 2 \\ \Large AI1110: Probability and Random Variables \\ \large Indian Institute of Technology Hyderabad}
+\author{Donal Loitam \\ \normalsize AI21BTECH11009 \\ \vspace*{20pt} \normalsize  12 April 2022 \\ \vspace*{20pt} \Large ICSE 2019 Grade 12}
+
+
+\begin{document}
+	% The title
+	\maketitle
+	
+	% The question
+	\textbf{Question 1(vi)} 
+	Prove that the function $f(x)=x^3-6x^2+12x+5$ is increasing on $\mathbb{R}$
+	
+	% The solution
+	\textbf{Solution.}
+	Given function is:
+	\begin{align}
+		f(x)=x^3-6x^2+12x+5
+	\end{align}
+	
+	Taking the first derivative of $f(x)$:
+	\begin{align}
+	 &f'(x)=3x^2-12x+12 \\
+     \implies &f'(x)=3(x^2-4x+4) \\
+     \implies &f'(x)=3(x-2)^2 \\
+     \therefore\;\;\; & f'(x)\ge0 \;\;,\;\forall ~x \in \mathbb{R}
+	\end{align}
+	
+  Since the slope of $f(x)$ i.e $f'(x)\ge0, \;\;\forall ~x \in \mathbb{R}$      \\ 
+	$\therefore$\; $f(x)=x^3-6x^2+12x+5$ is always increasing on $\mathbb{R}$
+	
+	
+	% The graph
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=\columnwidth]{mygraph.png}
+		\caption{Graph of $f(x) = x^3-6x^2+12x+5$ }
+		\label{fig-1}
+	\end{figure}
+	
+\end{document}
