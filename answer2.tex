@@ -4,7 +4,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
-
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
 
 \title{Assignment 2 \\ \Large AI1110: Probability and Random Variables \\ \large Indian Institute of Technology Hyderabad}
 \author{Donal Loitam \\ \normalsize AI21BTECH11009 \\ \vspace*{20pt} \normalsize  12 April 2022 \\ \vspace*{20pt} \Large ICSE 2019 Grade 12}
@@ -21,17 +21,35 @@
 	% The solution
 	\textbf{Solution.}
 	Given function is:
-	\begin{align}
-		f(x)=x^3-6x^2+12x+5
-	\end{align}
+  \begin{align}
+      f(x)=x^3-6x^2+12x+5
+  \end{align}
 	
-	Taking the first derivative of $f(x)$:
-	\begin{align}
-	 &f'(x)=3x^2-12x+12 \\
-     \implies &f'(x)=3(x^2-4x+4) \\
-     \implies &f'(x)=3(x-2)^2 \\
-     \therefore\;\;\; & f'(x)\ge0 \;\;,\;\forall ~x \in \mathbb{R}
-	\end{align}
+	Using the first principle of differentiation,the first derivative of $f(x)$:
+  \begin{align}
+	 f'(x)&=\lim_{h \to 0} \tfrac{f(x+h)-f(x)}{h} \\
+    \begin{split}
+           &=\lim_{h \to 0} \left[\tfrac{(x+h)^3 - 6(x+h)^2+12(x+h)-x^3}{h}\right.\\
+	   &\hspace{8em}\left.+\tfrac{6x^2-12x}{h}\right]\\
+     \end{split}\\
+     \begin{split}
+          &=\lim_{h \to 0} \tfrac{\sbrak{(x+h)^3-x^3}-6\sbrak{(x+h)^2-x^2}}{h}\\
+	  & \hspace{8em}+\tfrac{12\sbrak{(x+h)-x}}{h} \\
+      \end{split}\\
+          \because(x+h)^3&=x^3+3x^2h+3xh^2+h^3\\
+           f'(x)&=\lim_{h \to 0} \tfrac{\sbrak{h^3+3x^2h+3xh^2}-6\sbrak{2xh+h^2}+12h}{h} \\
+                &=\lim_{h \to 0} \tfrac{h^3+3x^2h+3xh^2-12xh-6h^2+12h}{h} \\
+       \begin{split}
+	      &= \lim_{h \to 0} (h^2 + 3x^2 + 3xh - 12x \\
+	      & \hspace{8em} - 6h + 12) \\
+	\end{split} \\
+    (\because{h \to 0}&,{h^2 \to 0})\\
+             f'(x) &=\lim_{h \to 0} (3x^2-12x+12) \\ 
+     \implies f'(x)&=3x^2-12x+12\\ 
+     \implies f'(x)&=3(x^2-4x+4) \\
+     \implies f'(x)&=3(x-2)^2 \\
+    \therefore\;\;\;  f'(x)&\ge0 \;\;\;,\;\forall ~x \in \mathbb{R}
+  \end{align}
 	
   Since the slope of $f(x)$ i.e $f'(x)\ge0, \;\;\forall ~x \in \mathbb{R}$      \\ 
 	$\therefore$\; $f(x)=x^3-6x^2+12x+5$ is always increasing on $\mathbb{R}$
